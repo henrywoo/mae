@@ -1,4 +1,4 @@
-## Masked Autoencoders: A Updated PyTorch Implementation for Single/Multi-GPU User
+## Masked Autoencoders: An Updated PyTorch Implementation for Single GPU with 4GB Memory
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/11435359/146857310-f258c86c-fde6-48e8-9cee-badd2b21bd2c.png" width="480">
@@ -17,12 +17,13 @@ This is an `updated` PyTorch/GPU re-implementation of the paper [Masked Autoenco
 ```python
 git checkout https://github.com/henrywoo/mae/
 cd mae
+pip install -r requirements.txt
 bash run.sh
 ```
 
-Screenshot:
+Screenshot of training it with a 4G GPU laptop:
 
-![](mae_train.png)
+![](mae_training.png)
 
 One liner change to replace ImageNette with ImageNet1K:
 
