@@ -172,3 +172,8 @@ The pre-training instruction is in [PRETRAIN.md](PRETRAIN.md).
 ### License
 
 This project is under the CC-BY-NC 4.0 license. See [LICENSE](LICENSE) for details.
+
+### Other Versions
+
+- The original version: [PyTorch Version](https://github.com/facebookresearch/mae)
+- Other version: [TF](https://github.com/ariG23498/mae-scalable-vision-learners), [MAE-pytorch 1](https://github.com/pengzhiliang/MAE-pytorch), [MAE-pytorch 2](https://github.com/FlyEgle/MAE-pytorch)
