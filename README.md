@@ -6,10 +6,37 @@
 
 This is an `updated` PyTorch/GPU re-implementation of the paper [Masked Autoencoders Are Scalable Vision Learners](https://arxiv.org/abs/2111.06377) for consumer GPU user for learning purpose.
 
-> * Updated to latest Torch and Timm
-> * Use Imagenette as the default dataset so that you can run the training in a consumer GPU to debug the code immediately without downloading the huge Imagenet
-> * Command to train the model with Single GPU: `bash run.sh`
+* Updated to latest Torch and Timm
+* Use Imagenette as the default dataset so that you can run the training in a consumer GPU to debug the code immediately without downloading the huge Imagenet
+* 
 
+[Github Repo: 🔗](https://github.com/henrywoo/mae/)
+
+### Command to Train the model:
+
+```python
+git checkout https://github.com/henrywoo/mae/
+cd mae
+bash run.sh
+```
+
+Screenshot:
+
+![](mae_train.png)
+
+One liner change to replace ImageNette with ImageNet1K:
+
+Repalce
+
+```python
+dataset_train = get_cv_dataset(path=DS_PATH_IMAGENETTE, transform=transform_train, name="full_size")
+```
+
+with
+
+```python
+dataset_train = get_cv_dataset(path=DS_PATH_IMAGENET1K, transform=transform_train)
+```
 
 ### Catalog
 

@@ -20,11 +20,6 @@ import torch
 import torch.backends.cudnn as cudnn
 from torch.utils.tensorboard import SummaryWriter
 import torchvision.transforms as transforms
-import torchvision.datasets as datasets
-
-import timm
-
-#assert timm.__version__ == "0.3.2"  # version check
 import timm.optim.optim_factory as optim_factory
 
 import maskedautoencoder.util.misc as misc
@@ -103,6 +98,7 @@ def get_args_parser():
 
 
 def main(args):
+    from hiq import print_model
     from hiq.cv_torch import get_cv_dataset, IN_STD, IN_MEAN, DS_PATH_IMAGENET1K, DS_PATH_IMAGENETTE
 
 
@@ -126,9 +122,8 @@ def main(args):
         transforms.RandomHorizontalFlip(),
         transforms.ToTensor(),
         transforms.Normalize(mean=IN_MEAN, std=IN_STD)])
-    dataset_train = get_cv_dataset(path=DS_PATH_IMAGENETTE,
-                                   transform=transform_train,
-                                   name="full_size")
+    dataset_train = get_cv_dataset(path=DS_PATH_IMAGENETTE, transform=transform_train, name="full_size")
+    #dataset_train = get_cv_dataset(path=DS_PATH_IMAGENET1K, transform=transform_train)
 
     if True:  # args.distributed:
         num_tasks = misc.get_world_size()
@@ -185,6 +180,7 @@ def main(args):
 
     misc.load_model(args=args, model_without_ddp=model_without_ddp, optimizer=optimizer, loss_scaler=loss_scaler)
 
+    print_model(model)
     print(f"Start training for {args.epochs} epochs")
     start_time = time.time()
     for epoch in range(args.start_epoch, args.epochs):
