@@ -1,5 +1,4 @@
 import argparse
-import os
 from pathlib import Path
 
 import maskedautoencoder.main_pretrain as trainer

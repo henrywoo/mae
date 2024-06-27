@@ -15,6 +15,8 @@ This is an `updated` PyTorch/GPU re-implementation of the paper [Masked Autoenco
 ### Command to Train the model:
 
 ```python
+pip install maskedautoencoder
+
 git checkout https://github.com/henrywoo/mae/
 cd mae
 pip install -r requirements.txt

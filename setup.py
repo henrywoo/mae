@@ -4,8 +4,8 @@ import os
 here = os.path.dirname(os.path.realpath(__file__))
 HAS_CUDA = os.system("nvidia-smi > /dev/null 2>&1") == 0
 
-VERSION = "0.0.1.dev1"
-DESCRIPTION = "MAE - Masked Autoencoder"
+VERSION = "0.0.1"
+DESCRIPTION = "MAE - Masked Autoencoder (An Updated PyTorch Implementation for Single GPU with 4GB Memory)"
 
 packages = [
     "maskedautoencoder",
