@@ -1,25 +1,15 @@
-## Masked Autoencoders: A PyTorch Implementation
+## Masked Autoencoders: A Updated PyTorch Implementation for Single/Multi-GPU User
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/11435359/146857310-f258c86c-fde6-48e8-9cee-badd2b21bd2c.png" width="480">
 </p>
 
+This is an `updated` PyTorch/GPU re-implementation of the paper [Masked Autoencoders Are Scalable Vision Learners](https://arxiv.org/abs/2111.06377) for consumer GPU user for learning purpose.
 
-This is a PyTorch/GPU re-implementation of the paper [Masked Autoencoders Are Scalable Vision Learners](https://arxiv.org/abs/2111.06377):
-```
-@Article{MaskedAutoencoders2021,
-  author  = {Kaiming He and Xinlei Chen and Saining Xie and Yanghao Li and Piotr Doll{\'a}r and Ross Girshick},
-  journal = {arXiv:2111.06377},
-  title   = {Masked Autoencoders Are Scalable Vision Learners},
-  year    = {2021},
-}
-```
+> * Updated to latest Torch and Timm
+> * Use Imagenette as the default dataset so that you can run the training in a consumer GPU to debug the code immediately without downloading the huge Imagenet
+> * Command to train the model with Single GPU: `bash run.sh`
 
-* The original implementation was in TensorFlow+TPU. This re-implementation is in PyTorch+GPU.
-
-* This repo is a modification on the [DeiT repo](https://github.com/facebookresearch/deit). Installation and preparation follow that repo.
-
-* This repo is based on [`timm==0.3.2`](https://github.com/rwightman/pytorch-image-models), for which a [fix](https://github.com/rwightman/pytorch-image-models/issues/420#issuecomment-776459842) is needed to work with PyTorch 1.8.1+.
 
 ### Catalog
 

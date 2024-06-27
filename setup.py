@@ -31,7 +31,7 @@ setup(
     long_description=open("README.md", "r", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
     install_requires=read_file(f"{here}/requirements.txt"),
-    url="https://github.com/oracle/hiq",
+    url="https://github.com/henrywoo/mae",
     keywords=[
         "maskedautoencoder", "mae", "autoendcoder"
     ],
