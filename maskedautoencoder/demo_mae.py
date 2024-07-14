@@ -7,7 +7,7 @@ from PIL import Image
 from hiq import set_seed, str_to_filename
 from hiq.vis import print_model
 
-import models_mae
+from maskedautoencoder import models_mae
 """
 🌳 MaskedAutoencoderViT<trainable_params:329239296,all_params:329541888,percentage:99.90818%>
 ├── PatchEmbed(patch_embed)

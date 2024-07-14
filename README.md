@@ -8,7 +8,7 @@ This is an `updated` PyTorch/GPU re-implementation of the paper [Masked Autoenco
 
 * Updated to latest Torch and Timm
 * Use Imagenette as the default dataset so that you can run the training in a consumer GPU to debug the code immediately without downloading the huge Imagenet
-* 
+
 
 [Github Repo: 🔗](https://github.com/henrywoo/mae/)
 
@@ -27,7 +27,7 @@ Screenshot of training it with a 4G GPU laptop:
 
 ![](mae_training.png)
 
-One liner change to replace ImageNette with ImageNet1K:
+One-line change to replace ImageNette with ImageNet1K:
 
 Repalce
 
